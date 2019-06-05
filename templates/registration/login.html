@@ -1,0 +1,10 @@
+<!-- templates/registration/login.html -->
+<h2>Login</h2>
+<form method="post">
+  {% csrf_token %}
+  <input type="hidden" name="next" value="{{ next }}" />
+
+  {{ form.as_p }}
+
+  <button type="submit">Login</button>
+</form>
